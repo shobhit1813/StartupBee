@@ -8,6 +8,10 @@
         <servlet-name>RegisterInnovaterServlet</servlet-name>
         <servlet-class>Controller.RegisterInnovaterServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RegisterCorperateServlet</servlet-name>
+        <servlet-class>Controller.RegisterCorperateServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/LoginServlet</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>RegisterInnovaterServlet</servlet-name>
         <url-pattern>/RegisterInnovaterServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RegisterCorperateServlet</servlet-name>
+        <url-pattern>/RegisterCorperateServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

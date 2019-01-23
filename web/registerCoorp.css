@@ -1,0 +1,42 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 23, 2019, 12:28:16 PM
+    Author     : shobhit
+*/
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 23, 2019, 7:47:01 AM
+    Author     : shobhit
+*/
+
+*{
+    color:orange;
+    font-weight: bold;
+}
+.bg{
+    background: url('login.jpg') no-repeat;
+    width: 100%;
+    height: 100%;
+}
+html,body{
+    height: 100%;
+}
+
+.form-container{
+    border: 0px solid #fff;
+    padding:50px 60px;
+    margin-top: 15vh;
+    -webkit-box-shadow: 10px 10px 24px 10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 24px 10px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 24px 10px rgba(0,0,0,0.75);
+}
+
