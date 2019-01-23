@@ -10,6 +10,7 @@ import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -35,14 +36,32 @@ public class RegisterInnovaterServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
+        String fname = request.getParameter("fname");
+        String lname = request.getParameter("lname");
+        String email = request.getParameter("email");
+        String phno = request.getParameter("phno");
+        String pass = request.getParameter("pass");
+        String addr = request.getParameter("addr");
+        
         try{    
               Class.forName("com.mysql.cj.jdbc.Driver");
-              Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Quench?useSSL=true&verifyServerCertificate=false&allowMultiQueries=true","root","1810");
-              PreparedStatement ps = con.prepareStatement("insert into registerInno values(?,?,?,?,?,?)");
+              Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/startupBee?useSSL=true&verifyServerCertificate=false&allowMultiQueries=true","root","1810");
+              PreparedStatement ps = con.prepareStatement("insert into registerInno values(?,?,?,?,?,?);");
+              ps.setString(1,fname);
+              ps.setString(2,lname);
+              ps.setString(3,email);
+              ps.setString(4,phno);
+               ps.setString(5,pass);
+              ps.setString(6,addr);
+              
               boolean chk = ps.execute();
-              if(chk){
-                  RequestDispatcher rd = request.getRequestDispatcher("/login.html");
+              
+              if(!chk){
+                  RequestDispatcher rd = request.getRequestDispatcher("login.html");
                   rd.forward(request,response);
+              }
+              else{
+                  System.out.println("Error");
               }
         }
         catch(Exception e){

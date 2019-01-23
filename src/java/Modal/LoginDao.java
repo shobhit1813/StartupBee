@@ -20,21 +20,18 @@ public class LoginDao {
     
     public static boolean validate(String email,String pass){
         boolean status = false;
+        System.out.println(email+" "+pass);
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Quench?useSSL=true&verifyServerCertificate=false&allowMultiQueries=true","root","1810");
-            PreparedStatement ps = con.prepareStatement("Select * from register where email=? and pass=?");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/startupBee?useSSL=true&verifyServerCertificate=false&allowMultiQueries=true","root","1810");
+            PreparedStatement ps = con.prepareStatement("select * from registerInno where email=? and pass=?");
             ps.setString(1,email);
             ps.setString(2,pass);
             ResultSet rs = ps.executeQuery();
-            if(rs.next())
-                status = true;
-            else{
-            
-            }
+            status = rs.next();
         }
         catch(Exception e){
-        
+            System.out.println(e);   
         }
         return status;
     }

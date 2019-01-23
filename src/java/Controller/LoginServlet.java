@@ -35,13 +35,15 @@ public class LoginServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         String email = request.getParameter("email");
         String pass = request.getParameter("pass");
+        System.out.println("enter"+email+" "+pass);
         if(LoginDao.validate(email,pass)){
             RequestDispatcher rd = request.getRequestDispatcher("dashboard.jsp");
             rd.forward(request,response);
         }
         else{
+            System.out.println("error");
             out.println("<script type=\"text/javascript\">");  
-            out.println("alert('deadbeef');");  
+            out.println("alert('error');");  
             out.println("</script>");
         }
     }

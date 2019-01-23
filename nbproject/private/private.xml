@@ -3,9 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/home/shobhit/NetBeansProjects/StartupBee/web/registerInno.css</file>
+            <file>file:/home/shobhit/NetBeansProjects/StartupBee/web/login.css</file>
+            <file>file:/home/shobhit/NetBeansProjects/StartupBee/src/java/Modal/LoginDao.java</file>
+            <file>file:/home/shobhit/NetBeansProjects/StartupBee/src/java/Controller/LoginServlet.java</file>
+            <file>file:/home/shobhit/NetBeansProjects/StartupBee/web/registerInno.html</file>
             <file>file:/home/shobhit/NetBeansProjects/StartupBee/web/home.html</file>
             <file>file:/home/shobhit/NetBeansProjects/StartupBee/web/login.html</file>
             <file>file:/home/shobhit/NetBeansProjects/StartupBee/web/home.css</file>
+            <file>file:/home/shobhit/NetBeansProjects/StartupBee/src/java/Controller/RegisterInnovaterServlet.java</file>
         </group>
     </open-files>
 </project-private>

@@ -6,7 +6,7 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Register Innovator</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
          <!-- Latest compiled and minified CSS -->
@@ -20,7 +20,7 @@ and open the template in the editor.
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 
-    <title>Login Page</title>
+    <title>Register INNOVATOR Page</title>
   </head>
   <body>
     </head>
@@ -29,37 +29,33 @@ and open the template in the editor.
            <div class="row">
                <div class="col-md-4 col-xs-12 col-sm-4"></div>
                <div class="col-md-4 col-xs-12 col-sm-4">
-                <form class="form-container">
+                   <form class="form-container" action="RegisterInnovaterServlet" method = "POST">
                     <h1>Register Innovator Form</h1>
                     <div class="form-group">
                       <label for="exampleInputEmail1">Fname</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                      <input type="text" class="form-control" name="fname" id="exampleInputEmail1" placeholder="First Name">
                     </div>
                     <div class="form-group">
                       <label for="exampleInputEmail1">Lname</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                      <input type="text" class="form-control" name="lname" id="exampleInputEmail1" placeholder="Last Name">
                     </div>
                     <div class="form-group">
                       <label for="exampleInputEmail1">Email</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                      <input type="email" class="form-control"  name="email" id="exampleInputEmail1" placeholder="Email">
                     </div>
                     <div class="form-group">
                       <label for="exampleInputPassword1">Password</label>
-                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                      <input type="password"  name="pass" class="form-control" id="exampleInputPassword1" placeholder="Password">
                     </div>
                     <div class="form-group">
                       <label for="exampleInputEmail1">Phone No</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                      <input type="text" class="form-control"  name="phno" id="exampleInputEmail1" placeholder="Phone No">
                     </div>
                     <div class="form-group">
                       <label for="exampleInputEmail1">Address</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                      <input type="text" class="form-control"  name="addr" id="exampleInputEmail1" placeholder="Address">
                     </div>
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox"> Remember me
-                      </label>
-                    </div>
+                    
                     <button type="submit" class="btn btn-success btn-block">Submit</button>
                   </form>
                 </div>
