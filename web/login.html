@@ -18,7 +18,7 @@ and open the template in the editor.
 
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
+        
 
         <title>Login Page</title>
     </head>
@@ -38,6 +38,14 @@ and open the template in the editor.
                     <div class="form-group">
                         <label for="exampleInputPassword1">Password</label>
                         <input type="password" class="form-control" name ="pass" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <div class="custom-control custom-radio">
+                      <input type="radio" class="custom-control-input" id="corp" name="Category" value="corp">
+                      <label class="custom-control-label" for="defaultUnchecked">Corporate</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                      <input type="radio" class="custom-control-input" id="inno" name="Category" value="inno">
+                      <label class="custom-control-label" for="defaultUnchecked">Innovator</label>
                     </div>
                     <button type="submit" class="btn btn-success btn-block">Submit</button>
                 </form>

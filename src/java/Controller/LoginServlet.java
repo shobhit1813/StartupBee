@@ -35,8 +35,10 @@ public class LoginServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         String email = request.getParameter("email");
         String pass = request.getParameter("pass");
-        System.out.println("enter"+email+" "+pass);
-        if(LoginDao.validate(email,pass)){
+        String radio = request.getParameter("Category");
+//        System.out.println("enter"+email+" "+pass);
+        
+        if(LoginDao.validate(email,pass,radio)){
             RequestDispatcher rd = request.getRequestDispatcher("dashboard.jsp");
             rd.forward(request,response);
         }
