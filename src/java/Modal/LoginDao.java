@@ -26,7 +26,7 @@ public class LoginDao {
             PreparedStatement ps;
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/startupBee?useSSL=true&verifyServerCertificate=false&allowMultiQueries=true","root","1810");
-            if(servlet.equals("corp"))
+            if(servlet.equals("Corporate"))
             ps = con.prepareStatement("select * from registerCoorp where email=? and pass=?");
             else
             ps = con.prepareStatement("select * from registerInno where email=? and pass=?");

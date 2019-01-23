@@ -13,6 +13,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -39,14 +40,18 @@ public class LoginServlet extends HttpServlet {
 //        System.out.println("enter"+email+" "+pass);
         
         if(LoginDao.validate(email,pass,radio)){
+            HttpSession session = request.getSession();
+            session.setAttribute("user",email);
+            session.setAttribute("cat",radio);
             RequestDispatcher rd = request.getRequestDispatcher("dashboard.jsp");
             rd.forward(request,response);
         }
         else{
             System.out.println("error");
             out.println("<script type=\"text/javascript\">");  
-            out.println("alert('error');");  
+            out.println("alert('Password Or Email does not match');");  
             out.println("</script>");
+           
         }
     }
 
