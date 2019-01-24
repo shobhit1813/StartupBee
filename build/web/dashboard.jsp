@@ -6,12 +6,14 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {
   font-family: "Lato", sans-serif;
+  transition: background-color .5s;
 }
 
 .sidenav {
@@ -70,8 +72,8 @@ body {
 </div>
 
 <div id="main">
-  <h2><%= session.getAttribute("cat") %></h2>
-  <p>Click on the element below to open the side navigation menu, and push this content to the right.</p>
+  <h2><%=request.getSession().getAttribute("cat").toString() %></h2>
+  <p>Click on the element below to open the side navigation menu, and push this content to the right. Notice that we add a black see-through background-color to body when the sidenav is opened.</p>
   <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
 </div>
 
@@ -79,14 +81,15 @@ body {
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
   document.getElementById("main").style.marginLeft = "250px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 }
 
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
   document.getElementById("main").style.marginLeft= "0";
+  document.body.style.backgroundColor = "white";
 }
 </script>
    
 </body>
 </html> 
-

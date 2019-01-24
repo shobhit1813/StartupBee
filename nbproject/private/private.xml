@@ -4,11 +4,10 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/home/shobhit/NetBeansProjects/StartupBee/src/java/Controller/RegisterCorperateServlet.java</file>
-            <file>file:/home/shobhit/NetBeansProjects/StartupBee/web/registerCoorp.html</file>
+            <file>file:/home/shobhit/NetBeansProjects/StartupBee/src/java/Modal/LoginDao.java</file>
             <file>file:/home/shobhit/NetBeansProjects/StartupBee/src/java/Controller/LoginServlet.java</file>
-            <file>file:/home/shobhit/NetBeansProjects/StartupBee/web/registerCoorp.css</file>
-            <file>file:/home/shobhit/NetBeansProjects/StartupBee/web/registerInno.html</file>
             <file>file:/home/shobhit/NetBeansProjects/StartupBee/web/dashboard.jsp</file>
+            <file>file:/home/shobhit/NetBeansProjects/StartupBee/web/home.html</file>
             <file>file:/home/shobhit/NetBeansProjects/StartupBee/web/login.html</file>
         </group>
     </open-files>
