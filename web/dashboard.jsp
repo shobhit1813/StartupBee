@@ -62,8 +62,11 @@ body {
 </style>
 </head>
 <body>
-
-<div id="mySidenav" class="sidenav">
+<%  
+    String cato = request.getSession().getAttribute("cat").toString(); 
+    if(cato.equals("Innovator")){
+        %>
+  <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="profile.jsp">My Profile</a>
   <a href="problem.jsp">Problems</a>
@@ -74,9 +77,26 @@ body {
 <div id="main">
   <h2><%=request.getSession().getAttribute("cat").toString() %></h2>
   <p>Click on the element below to open the side navigation menu, and push this content to the right. Notice that we add a black see-through background-color to body when the sidenav is opened.</p>
-  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+  
+</div>
+  <%  }
+    else{
+    %>
+    <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="profile.jsp">My Profile</a>
+  <a href="problem.jsp">Add Mentor</a>
+  <a href="mentor.jsp">Assign Mentor</a>
+  <a href="acceptinvitation.jsp">Status</a>
 </div>
 
+<div id="main">
+  <h2><%=request.getSession().getAttribute("cat").toString() %></h2>
+  <p>Click on the element below to open the side navigation menu, and push this content to the right. Notice that we add a black see-through background-color to body when the sidenav is opened.</p>
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+</div>
+  <% }%>
 <script>
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
