@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -41,6 +41,11 @@ public class AddMentor extends HttpServlet {
             PreparedStatement ps = con.prepareStatement("insert into mentor values(?,?);");
               ps.setString(1,mentor);
               ps.setString(2,corp);
+              int i = ps.executeUpdate();
+              if(i > 0){
+                  RequestDispatcher rd = request.getRequestDispatcher("dashboard.jsp");
+                  rd.forward(request,response);
+              }
         } 
         catch(Exception e){
             System.out.println(e);
