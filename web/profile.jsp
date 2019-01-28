@@ -125,8 +125,8 @@ else{ %>
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="profile.jsp">My Profile</a>
   <a href="addmentor.html">Add Mentor</a>
-  <a href="mentor.jsp">Assign Mentor</a>
-  <a href="acceptinvitation.jsp">Status</a>
+  <a href="assignMentor.jsp">Assign Mentor</a>
+  <a href="status.jsp">Status</a>
 </div>
 <% } %>
 <div id="main">
