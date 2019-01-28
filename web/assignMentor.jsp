@@ -4,6 +4,10 @@
     Author     : shobhit
 --%>
 
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.Connection"%>
+<%@page import="java.sql.DriverManager"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -75,6 +79,20 @@
         <h2>Assign Mentor </h2>
         <p>Select problem to assign mentor</p>
         <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+        <%
+            try{
+                Class.forName("com.mysql.cj.jdbc.Driver");
+                Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/startupBee?useSSL=true&verifyServerCertificate=false&allowMultiQueries=true","root","1810");
+                PreparedStatement ps = con.prepareStatement("select * from problem");
+                ResultSet rs = ps.executeQuery();
+                while(rs.next()){
+                    
+                }
+            }
+            catch(Exception e){
+                
+            }
+            %>
     </div>
     </body>
     <script>
