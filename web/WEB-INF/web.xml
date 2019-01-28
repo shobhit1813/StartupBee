@@ -14,7 +14,7 @@
     </servlet>
     <servlet>
         <servlet-name>AddMentor</servlet-name>
-        <servlet-class>AddMentor</servlet-class>
+        <servlet-class>Controller.AddMentor</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>

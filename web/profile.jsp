@@ -109,6 +109,8 @@ function closeNav() {
     </script>
 </head>
 <body>
+    <% if(request.getSession().getAttribute("cat").toString().equals("Innovator")){       
+%>
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="profile.jsp">My Profile</a>
@@ -116,7 +118,17 @@ function closeNav() {
   <a href="mentor.jsp">My Mentor</a>
   <a href="acceptinvitation.jsp">Accept Invitation</a>
 </div>
+<%}
+else{ %>
 
+    <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="profile.jsp">My Profile</a>
+  <a href="addmentor.html">Add Mentor</a>
+  <a href="mentor.jsp">Assign Mentor</a>
+  <a href="acceptinvitation.jsp">Status</a>
+</div>
+<% } %>
 <div id="main">
      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
 <h2 style="text-align:center">User Profile Card</h2>

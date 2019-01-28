@@ -1,3 +1,5 @@
+package Controller;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -35,17 +37,21 @@ public class AddMentor extends HttpServlet {
         PrintWriter out = response.getWriter();
         String mentor = request.getParameter("mentor");
         String corp = request.getParameter("corp");
+        String email = request.getParameter("email");
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/startupBee?useSSL=true&verifyServerCertificate=false&allowMultiQueries=true","root","1810");
-            PreparedStatement ps = con.prepareStatement("insert into mentor values(?,?);");
+            PreparedStatement ps = con.prepareStatement("insert into mentor values(?,?,?);");
               ps.setString(1,mentor);
               ps.setString(2,corp);
+              ps.setString(3,email);
               int i = ps.executeUpdate();
               if(i > 0){
                   RequestDispatcher rd = request.getRequestDispatcher("dashboard.jsp");
                   rd.forward(request,response);
+                 
               }
+              
         } 
         catch(Exception e){
             System.out.println(e);
