@@ -66,6 +66,12 @@
        .sidenav {padding-top: 15px;}
        .sidenav a {font-size: 18px;}
      }   
+     .ques{
+         height: 100px;
+         width: 500px;
+         border-color: red;
+     }
+     
     </style>
     <body>
     <div id="mySidenav" class="sidenav">
@@ -86,13 +92,17 @@
                 PreparedStatement ps = con.prepareStatement("select * from problem");
                 ResultSet rs = ps.executeQuery();
                 while(rs.next()){
-                    
-                }
-            }
-            catch(Exception e){
-                
-            }
             %>
+            <div class="ques">
+                <span><%= rs.getString(1) %>  -> <%= rs.getString(2)%></span><br><br>
+                <input type="checkbox" name="prob" value="<%=rs.getString(1)%>">Select
+            </div>
+            <%}
+                }
+                catch(Exception e){
+                    System.out.println(e);
+                }
+                %>
     </div>
     </body>
     <script>
